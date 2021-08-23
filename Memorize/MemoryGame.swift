@@ -12,30 +12,11 @@ struct MemoryGame<CardContent> where CardContent: Equatable{
     var cards: Array<Card>
     
     var indexOfTheOneAndOnlyFaceUpCard: Int? {
-        get{
-            var faceUpCardIndices = [Int]()
-            
-            for index in cards.indices{
-                if cards[index].isFaceUp{
-                    faceUpCardIndices.append(index)
-                }
-            }
-            
-            if faceUpCardIndices.count == 1{
-                return faceUpCardIndices.first
-            } else {
-                return nil
-            }
-            
-        }
+        get { cards.indices.filter { cards[$0].isFaceUp }.only }  //if we have 2 cards faceup will return nil
         
         set{
-            for index in cards.indices{
-                if index == newValue{
-                    cards[index].isFaceUp = true
-                } else{
-                    cards[index].isFaceUp = false
-                }
+            for index in cards.indices { // every touch we turn every card faceDown except the chosen
+                cards[index].isFaceUp = index == newValue
             }
         }
     }
@@ -50,7 +31,7 @@ struct MemoryGame<CardContent> where CardContent: Equatable{
                 }
                 cards[chosenIndex].isFaceUp = true
                 
-            } else {
+            } else {  //is the first card we chose
                 indexOfTheOneAndOnlyFaceUpCard = chosenIndex
             }
         }
