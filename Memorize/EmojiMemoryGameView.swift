@@ -15,7 +15,7 @@ struct EmojiMemoryGameView: View {
         HStack{
             Grid(items: viewModel.cards){ card in
                 CardView(card: card).onTapGesture {
-                    self.viewModel.choose(card: card)
+                    viewModel.choose(card: card)
                 }
                 .padding(5)
             }
@@ -66,6 +66,9 @@ struct CardView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        EmojiMemoryGameView(viewModel: EmojiMemoryGame())
+        Group {
+            EmojiMemoryGameView(viewModel: EmojiMemoryGame())
+            EmojiMemoryGameView(viewModel: EmojiMemoryGame())
+        }
     }
 }

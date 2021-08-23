@@ -10,11 +10,16 @@ import Foundation
 
 struct MemoryGame<CardContent> {
     var cards: Array<Card>
+    var indexOfTheOneAndOnlyFaceUpCard: Int?
     
     mutating func choose(card: Card) {
         print("card chosen: \(card)")
-        let chosenIndex: Int = cards.firstIndex(matching: card)
-        cards[chosenIndex].isFaceUp = !cards[chosenIndex].isFaceUp
+        if let chosenIndex = cards.firstIndex(matching: card), !cards[chosenIndex].isFaceUp, !cards[chosenIndex].isMatched {
+           
+            
+            
+            cards[chosenIndex].isFaceUp = !cards[chosenIndex].isFaceUp
+        }
     }
     
     
