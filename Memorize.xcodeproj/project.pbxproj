@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		343F801C26D86A8000226959 /* Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343F801B26D86A8000226959 /* Pie.swift */; };
 		344C856126827D5A00658457 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344C856026827D5A00658457 /* Grid.swift */; };
 		344C85632682BCC900658457 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344C85622682BCC900658457 /* GridLayout.swift */; };
 		344C85652682CC7E00658457 /* Array+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344C85642682CC7E00658457 /* Array+Identifiable.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		343F801B26D86A8000226959 /* Pie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pie.swift; sourceTree = "<group>"; };
 		344C856026827D5A00658457 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = SOURCE_ROOT; };
 		344C85622682BCC900658457 /* GridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 		344C85642682CC7E00658457 /* Array+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Identifiable.swift"; sourceTree = SOURCE_ROOT; };
@@ -76,6 +78,7 @@
 				3E348A782475A8B7002F3BD8 /* AppDelegate.swift */,
 				3E348A7A2475A8B7002F3BD8 /* SceneDelegate.swift */,
 				3E348A7C2475A8B7002F3BD8 /* EmojiMemoryGameView.swift */,
+				343F801B26D86A8000226959 /* Pie.swift */,
 				3E7C898824ACDF04006DF3E5 /* EmojiMemoryGame.swift */,
 				3E348A7E2475A8B8002F3BD8 /* Assets.xcassets */,
 				3E348A832475A8B8002F3BD8 /* LaunchScreen.storyboard */,
@@ -164,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				343F801C26D86A8000226959 /* Pie.swift in Sources */,
 				3E348A792475A8B7002F3BD8 /* AppDelegate.swift in Sources */,
 				3E348A7B2475A8B7002F3BD8 /* SceneDelegate.swift in Sources */,
 				3E7C898724ACDCBF006DF3E5 /* MemoryGame.swift in Sources */,
